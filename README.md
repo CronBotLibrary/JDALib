@@ -50,3 +50,4 @@ dependencies {
 ```
 
 ## Task
+[Issues](https://github.com/CronBotLibrary/JDALib/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc)
