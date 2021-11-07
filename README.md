@@ -1,6 +1,8 @@
 # JDALib
 Helper library for JDA
 
+This libarary is amied at beginners and person with intermediate skills and we don't recommend person with advanced skills to use this library.
+
 # Usage
 TODO
 ## Activity
