@@ -2,7 +2,7 @@
   "formatVersion": "1.1",
   "component": {
     "group": "jp.cron",
-    "module": "JDALib",
+    "module": "jdalib",
     "version": "0.1",
     "attributes": {
       "org.gradle.status": "release"
@@ -25,13 +25,13 @@
       },
       "files": [
         {
-          "name": "JDALib-0.1.jar",
-          "url": "JDALib-0.1.jar",
+          "name": "jdalib-0.1.jar",
+          "url": "jdalib-0.1.jar",
           "size": 10424279,
-          "sha512": "5be1d6fcef54f9bfb3e432ece6aabd27da75620796f307b4954cc5881aa5c16d98db7ed6903f9c5c3b6082ab77922e6de8fc0e2b3d1fe54aa95b5e2c6b5dbafb",
-          "sha256": "d6241ea1ccf8691393c473d7dcda4b378977a4347e61000538c71a527333c2d7",
-          "sha1": "cb59218b5df7a6360e48ba494b5ed2de1cb08190",
-          "md5": "8a403f007b6acf39a4ed62e2bb36dde5"
+          "sha512": "460763d11554d8f05060ec635fcf450890491c7964aeff91acef4893be1bccf3285d90b0647aeb74ace87eca2537ea9c7de32a0ae59e5e19d1c906bef0d560c1",
+          "sha256": "2217ab6b982e77ebe85d043782c167426b20171364370cc7a39d179fc759203a",
+          "sha1": "8d73421f8f0b50e675a992a4a9a2915136f34674",
+          "md5": "a6a540e82a2b741412e01e37160b1fea"
         }
       ]
     },
@@ -83,13 +83,13 @@
       ],
       "files": [
         {
-          "name": "JDALib-0.1.jar",
-          "url": "JDALib-0.1.jar",
+          "name": "jdalib-0.1.jar",
+          "url": "jdalib-0.1.jar",
           "size": 10424279,
-          "sha512": "5be1d6fcef54f9bfb3e432ece6aabd27da75620796f307b4954cc5881aa5c16d98db7ed6903f9c5c3b6082ab77922e6de8fc0e2b3d1fe54aa95b5e2c6b5dbafb",
-          "sha256": "d6241ea1ccf8691393c473d7dcda4b378977a4347e61000538c71a527333c2d7",
-          "sha1": "cb59218b5df7a6360e48ba494b5ed2de1cb08190",
-          "md5": "8a403f007b6acf39a4ed62e2bb36dde5"
+          "sha512": "460763d11554d8f05060ec635fcf450890491c7964aeff91acef4893be1bccf3285d90b0647aeb74ace87eca2537ea9c7de32a0ae59e5e19d1c906bef0d560c1",
+          "sha256": "2217ab6b982e77ebe85d043782c167426b20171364370cc7a39d179fc759203a",
+          "sha1": "8d73421f8f0b50e675a992a4a9a2915136f34674",
+          "md5": "a6a540e82a2b741412e01e37160b1fea"
         }
       ]
     }
