@@ -47,32 +47,28 @@ publishing {
             name = "GitHubPackages"
             url = 'https://maven.pkg.github.com/CronBotLibrary/JDALib'
             credentials {
-                username = project.hasProperty("GITHUB_USER") ? GITHUB_USER : 'cronree-91'
-                password = project.hasProperty("ACCESS_TOKEN") ? ACCESS_TOKEN : ''
+                username = 'cronree-91'
+                password = project.hasProperty("GITHUB_TOKEN") ? GITHUB_TOKEN : System.getenv("ACCESS_TOKEN")
             }
         }
     }
 
     publications {
-        gpr(MavenPublication) {
-            from(components.java)
+//        gpr(MavenPublication) {
+//            from(components.java)
+//        }
+        maven(MavenPublication) {
+            version project.version
+
+            pom {
+                url = 'https://github.com/CronBotLibrary/JDALib'
+                licenses {
+                    license {
+                        name = 'CC BY-NC-SA 4.0'
+                    }
+                }
+            }
+            from components.java
         }
     }
-//    publications {
-//        maven(MavenPublication) {
-//            version project.version
-//
-//            pom {
-//                url = 'https://github.com/CronBotLibrary/JDALib'
-//                licenses {
-//                    license {
-//                        name = 'CC BY-NC-SA 4.0'
-//                    }
-//                }
-//            }
-//
-//            from components.java
-//            artifact jar.archiveFile
-//        }
-//    }
 }
