@@ -9,4 +9,7 @@ class Property {
     var updateActivityWhenMemberJoined = false
     var updateActivityWhenMemberLeft = false
 
+    // prefix
+    var prefix = "!"
+
 }
