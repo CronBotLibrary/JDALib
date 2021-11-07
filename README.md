@@ -3,6 +3,19 @@ Helper library for JDA
 
 # Usage
 TODO
+## Activity
+```java
+// JDALib.setActivity(status, pattern);
+// pattern embeds:
+//   {serverCount}, {memberCount}
+
+// Ex
+jdaLib.setActivity(true, "Working in {serverCount} servers.");
+
+// You can customize embed string
+jdaLib.property.setActivityEmbedServerCount("{serverCount}");
+jdaLib.property.setActivityEmbedMemberCount("{memberCount}")
+```
 
 # Install
 ## Gradle Groovy
@@ -35,3 +48,5 @@ dependencies {
   <version>0.1</version>
 </dependency>
 ```
+
+## Task
