@@ -47,8 +47,8 @@ publishing {
             name = "GitHubPackages"
             url = 'https://maven.pkg.github.com/CronBotLibrary/JDALib'
             credentials {
-                username = project.hasProperty("GITHUB_USER") ? GITHUB_USER : ''
-                password = project.hasProperty("GITHUB_TOKEN") ? GITHUB_TOKEN : ''
+                username = project.hasProperty("GITHUB_USER") ? GITHUB_USER : 'cronree-91'
+                password = project.hasProperty("ACCESS_TOKEN") ? ACCESS_TOKEN : ''
             }
         }
     }
