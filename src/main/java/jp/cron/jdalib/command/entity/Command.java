@@ -1,4 +1,4 @@
-package jp.cron.jdalib.command;
+package jp.cron.jdalib.command.entity;
 
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 

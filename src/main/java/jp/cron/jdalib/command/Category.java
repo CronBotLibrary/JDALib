@@ -1,4 +1,4 @@
-package jp.cron.jdalib.command.entity.annotations;
+package jp.cron.jdalib.command;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
