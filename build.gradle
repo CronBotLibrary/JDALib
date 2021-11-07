@@ -1,0 +1,78 @@
+plugins {
+    id 'java'
+    id 'maven-publish'
+}
+
+group 'jp.cron'
+version '0.1'
+
+repositories {
+    mavenCentral()
+    maven {
+        name = "jitpack.io"
+        url = "https://jitpack.io/"
+    }
+    maven {
+        name = 'swt-repo'
+        url = "https://maven-eclipse.github.io/maven"
+    }
+}
+
+configurations {
+    jarLibs
+}
+
+
+dependencies {
+    jarLibs('org.javacord:javacord:3.3.2')
+    jarLibs('org.apache.logging.log4j:log4j-core:2.14.1')
+    jarLibs("com.vdurmont:emoji-java:5.1.1")
+    jarLibs("com.github.ZeroMemes:Alpine:1.5")
+    jarLibs('com.google.code.gson:gson:2.8.9')
+
+    implementation configurations.jarLibs
+}
+
+
+jar {
+    from { (configurations.jarLibs).collect { it.isDirectory() ? it : zipTree(it) } } {
+        exclude 'META-INF/*', 'META-INF/*.SF', 'META-INF/*.DSA'
+        duplicatesStrategy = 'EXCLUDE'
+    }
+}
+
+publishing {
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = 'https://maven.pkg.github.com/CronBotLibrary/JDALib'
+            credentials {
+                username = project.hasProperty("GITHUB_USER") ? GITHUB_USER : ''
+                password = project.hasProperty("GITHUB_TOKEN") ? GITHUB_TOKEN : ''
+            }
+        }
+    }
+
+    publications {
+        gpr(MavenPublication) {
+            from(components.java)
+        }
+    }
+//    publications {
+//        maven(MavenPublication) {
+//            version project.version
+//
+//            pom {
+//                url = 'https://github.com/CronBotLibrary/JDALib'
+//                licenses {
+//                    license {
+//                        name = 'CC BY-NC-SA 4.0'
+//                    }
+//                }
+//            }
+//
+//            from components.java
+//            artifact jar.archiveFile
+//        }
+//    }
+}
