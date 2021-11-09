@@ -4,13 +4,11 @@ import jp.cron.jdalib.command.entity.Category;
 import jp.cron.jdalib.util.common.CommonUtil;
 
 import java.lang.reflect.Method;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class CommandManager {
 
-    public List<Category> categories;
+    public List<Category> categories = new ArrayList();
 
     public void register(Category category){
         categories.add(category);

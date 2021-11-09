@@ -12,7 +12,7 @@ compileKotlin {
 
 
 group 'jp.cron'
-version '0.1.1'
+version '0.3'
 
 repositories {
     mavenCentral()
@@ -48,7 +48,7 @@ dependencies {
 
 
 jar {
-    from { (configurations.jarLibs).collect { it.isDirectory() ? it : zipTree(it) } } {
+    from { (configurations.jarLibs).findAll { !it.name.endsWith('pom') }.collect { it.isDirectory() ? it : zipTree(it) } } {
         exclude 'META-INF/*', 'META-INF/*.SF', 'META-INF/*.DSA'
         exclude '*.pom'
         duplicatesStrategy = 'EXCLUDE'

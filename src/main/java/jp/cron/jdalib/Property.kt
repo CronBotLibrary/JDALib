@@ -9,7 +9,8 @@ class Property {
     var updateActivityWhenMemberJoined = false
     var updateActivityWhenMemberLeft = false
 
-    // prefix
-    var prefix = "!"
+    // config
+    var configFileName = "config.txt"
+    var configLinePattern = Regex(pattern = "^([A-Z]+)\\s?=\\s?(.+)$")
 
 }

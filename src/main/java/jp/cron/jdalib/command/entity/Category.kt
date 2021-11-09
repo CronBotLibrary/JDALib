@@ -3,13 +3,11 @@ package jp.cron.jdalib.command.entity
 import jp.cron.jdalib.command.Command
 import jp.cron.jdalib.util.common.CommonUtil
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent
-import java.lang.annotation.Retention
-import java.lang.annotation.RetentionPolicy
 import java.lang.reflect.Method
 import java.util.function.Consumer
 
 abstract class Category {
-    @Retention(RetentionPolicy.RUNTIME)
+    @kotlin.annotation.Retention(AnnotationRetention.RUNTIME)
     @Target(AnnotationTarget.ANNOTATION_CLASS, AnnotationTarget.CLASS)
     annotation class Declaration(val name: String, val prefix: String, val description: String = "")
 
@@ -31,7 +29,7 @@ abstract class Category {
                 val anno = method.getAnnotation(Command::class.java)
                 if (e.message.contentRaw.startsWith(prefix+anno.name)){
                     if (precall()){
-                        method.invoke(e)
+                        method.invoke(this, e)
                     }
                 }
             }
