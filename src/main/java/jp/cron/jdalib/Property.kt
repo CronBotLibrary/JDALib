@@ -11,6 +11,6 @@ class Property {
 
     // config
     var configFileName = "config.txt"
-    var configLinePattern = Regex(pattern = "^([A-Z]+)\\s?=\\s?(.+)$")
+    var configLinePattern = Regex(pattern = "^([A-Z_]+)\\s?=\\s?(.+)$")
 
 }
